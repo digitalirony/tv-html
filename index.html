@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="DashPlayer" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Dash JavaScript Player</title>
+    <meta name="description" content="" />
+    <link rel="icon" type="image/x-icon" href="http://dashif.org/wp-content/uploads/2014/12/dashif.ico" />
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+
+    <link rel="stylesheet" href="app/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/lib/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="app/lib/bootstrap/css/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="app/css/main.css">
+    <link rel="stylesheet" href="contrib/akamai/controlbar/controlbar.css">
+
+    <!--Libs-->
+    <script src="app/lib/jquery/jquery-3.1.1.min.js"></script>
+
+    <script src="app/lib/angular/angular.min.js"></script>
+    <script src="app/lib/angular/angular-resource.min.js"></script>
+    <script src="app/lib/angular/angular-flot.js"></script>
+
+    <script src="app/lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="app/lib/flot/jquery.flot.min.js"></script>
+    <script src="app/lib/flot/jquery.flot.resize.min.js"></script>
+    <script src="app/lib/flot/jquery.flot.axislabels.js"></script>
+    <!-- App -->
+    <script src="dash.all.min.js"></script>
+    <script src="contrib/akamai/controlbar/ControlBar.js"></script>
+    <script src="app/main.js"></script>
+    <script src="app/rules/DownloadRatioRule.js"></script>
+    <script src="app/rules/ThroughputRule.js"></script>
+
+</head>
+<body ng-controller="DashController" >
+
+
+    <!-- TITLE BAR -->
+    <div class="container">
+
+        <!--VIDEO PLAYER / CONTROLS -->
+        <div class="row">
+            <div class="dash-video-player col-md-9 col-md-offset-2">
+                <div id="videoContainer" class="videoContainer">
+                    <video></video>
+                    <div id="video-caption"></div>
+                    <div id="videoController" class="video-controller unselectable" ng-cloak>
+                        <div id="playPauseBtn" class="btn-play-pause" data-toggle="tooltip" data-placement="bottom" title="Play/Pause">
+                            <span id="iconPlayPause" class="icon-play"></span>
+                        </div>
+                        <span id="videoTime" class="time-display">00:00:00</span>
+                        <div id="fullscreenBtn" class="btn-fullscreen control-icon-layout" data-toggle="tooltip" data-placement="bottom" title="Fullscreen">
+                            <span class="icon-fullscreen-enter"></span>
+                        </div>
+                        <div id="bitrateListBtn" class="btn-bitrate control-icon-layout" data-toggle="tooltip" data-placement="bottom" title="Bitrate List">
+                            <span class="icon-bitrate"></span>
+                        </div>
+                        <input type="range" id="volumebar" class="volumebar" value="1" min="0" max="1" step=".01"/>
+                        <div id="muteBtn" class="btn-mute control-icon-layout" data-toggle="tooltip" data-placement="bottom" title="Mute">
+                            <span id="iconMute" class="icon-mute-off"></span>
+                        </div>
+                        <div id="trackSwitchBtn" class="btn-track-switch control-icon-layout" data-toggle="tooltip" data-placement="bottom" title="Track List">
+                            <span class="icon-tracks"></span>
+                        </div>
+                        <div id="captionBtn" class="btn-caption control-icon-layout" data-toggle="tooltip" data-placement="bottom" title="Closed Caption / Subtitles">
+                            <span class="icon-caption"></span>
+                        </div>
+                        <span id="videoDuration" class="duration-display">00:00:00</span>
+                        <div class="seekContainer">
+                            <div id="seekbar" class="seekbar seekbar-complete">
+                                <div id="seekbar-buffer" class="seekbar seekbar-buffer"></div>
+                                <div id="seekbar-play" class="seekbar seekbar-play"></div>
+                            </div>
+                        </div>
+                        <div id="thumbnail-container" class="thumbnail-container">
+                            <div id="thumbnail-elem" class="thumbnail-elem"></div>
+                            <div id="thumbnail-time-label" class="thumbnail-time-label"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</script>
+</body>
+</html>
