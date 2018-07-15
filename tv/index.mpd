@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<MPD
+    type="dynamic"
+    xmlns="urn:mpeg:dash:schema:mpd:2011"
+    availabilityStartTime="2018-07-15T02:52:22Z"
+    publishTime="2018-07-15T02:52:22Z"
+    minimumUpdatePeriod="PT4.167S"
+    minBufferTime="PT3.000S"
+    timeShiftBufferDepth="P0Y00M00DT0H02M46.666S"
+    suggestedPresentationDelay="PT9.334S"
+    profiles="urn:hbbtv:dash:profile:isoff-live:2012,urn:mpeg:dash:profile:isoff-live:2011"
+    xmlns:xsi="http://www.w3.org/2011/XMLSchema-instance"
+    xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd">
+  <Period start="PT0S" id="dash">
+    <AdaptationSet
+        id="1"
+        startWithSAP="1"
+        segmentAlignment="true"
+        maxWidth="1920"
+        maxHeight="1080"
+        maxFrameRate="60"
+        par="16:9">
+      <Representation
+          id="tv_H264"
+          mimeType="video/mp4"
+          codecs="avc1.64002a"
+          width="1920"
+          height="1080"
+          frameRate="60"
+          sar="1:1"
+          bandwidth="4000000">
+        <SegmentTemplate
+            presentationTimeOffset="0"
+            timescale="1000"
+            media="$Time$.m4v"
+            initialization="init.m4v">
+          <SegmentTimeline>
+             <S t="529166" d="4166"/>
+             <S t="533332" d="4167"/>
+             <S t="537499" d="4167"/>
+             <S t="541666" d="4166"/>
+             <S t="545832" d="4167"/>
+             <S t="549999" d="4167"/>
+             <S t="554166" d="4166"/>
+             <S t="558332" d="4167"/>
+             <S t="562499" d="4167"/>
+             <S t="566666" d="4166"/>
+             <S t="570832" d="4167"/>
+             <S t="574999" d="4167"/>
+             <S t="579166" d="4166"/>
+             <S t="583332" d="4167"/>
+             <S t="587499" d="4167"/>
+             <S t="591666" d="4166"/>
+             <S t="595832" d="4167"/>
+             <S t="599999" d="4167"/>
+             <S t="604166" d="4166"/>
+             <S t="608332" d="4167"/>
+             <S t="612499" d="4167"/>
+             <S t="616666" d="4166"/>
+             <S t="620832" d="4167"/>
+             <S t="624999" d="4167"/>
+             <S t="629166" d="4166"/>
+             <S t="633332" d="4167"/>
+             <S t="637499" d="4167"/>
+             <S t="641666" d="4166"/>
+             <S t="645832" d="4167"/>
+             <S t="649999" d="4167"/>
+             <S t="654166" d="4166"/>
+             <S t="658332" d="4167"/>
+             <S t="662499" d="4167"/>
+             <S t="666666" d="4166"/>
+             <S t="670832" d="4167"/>
+             <S t="674999" d="4167"/>
+             <S t="679166" d="4166"/>
+             <S t="683332" d="4167"/>
+             <S t="687499" d="4167"/>
+             <S t="691666" d="4166"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet
+        id="2"
+        startWithSAP="1"
+        segmentAlignment="true">
+      <AudioChannelConfiguration
+          schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011"
+          value="1"/>
+      <Representation
+          id="tv_AAC"
+          mimeType="audio/mp4"
+          codecs="mp4a.40.2"
+          audioSamplingRate="44100"
+          bandwidth="160000">
+        <SegmentTemplate
+            presentationTimeOffset="0"
+            timescale="1000"
+            media="$Time$.m4a"
+            initialization="init.m4a">
+          <SegmentTimeline>
+             <S t="529166" d="4166"/>
+             <S t="533332" d="4167"/>
+             <S t="537499" d="4167"/>
+             <S t="541666" d="4166"/>
+             <S t="545832" d="4167"/>
+             <S t="549999" d="4167"/>
+             <S t="554166" d="4166"/>
+             <S t="558332" d="4167"/>
+             <S t="562499" d="4167"/>
+             <S t="566666" d="4166"/>
+             <S t="570832" d="4167"/>
+             <S t="574999" d="4167"/>
+             <S t="579166" d="4166"/>
+             <S t="583332" d="4167"/>
+             <S t="587499" d="4167"/>
+             <S t="591666" d="4166"/>
+             <S t="595832" d="4167"/>
+             <S t="599999" d="4167"/>
+             <S t="604166" d="4166"/>
+             <S t="608332" d="4167"/>
+             <S t="612499" d="4167"/>
+             <S t="616666" d="4166"/>
+             <S t="620832" d="4167"/>
+             <S t="624999" d="4167"/>
+             <S t="629166" d="4166"/>
+             <S t="633332" d="4167"/>
+             <S t="637499" d="4167"/>
+             <S t="641666" d="4166"/>
+             <S t="645832" d="4167"/>
+             <S t="649999" d="4167"/>
+             <S t="654166" d="4166"/>
+             <S t="658332" d="4167"/>
+             <S t="662499" d="4167"/>
+             <S t="666666" d="4166"/>
+             <S t="670832" d="4167"/>
+             <S t="674999" d="4167"/>
+             <S t="679166" d="4166"/>
+             <S t="683332" d="4167"/>
+             <S t="687499" d="4167"/>
+             <S t="691666" d="4166"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+  <UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-head:2014"
+       value="http://tv2.the-galaxy.net/time" />
+</MPD>

@@ -35,7 +35,7 @@ angular.module('DashIFTestVectorsService', ['ngResource']).factory('dashifTestVe
 
 app.controller('DashController', function ($scope, sources, contributors, dashifTestVectors) {
     $scope.selectedItem = {
-        url: 'http://tv.the-galaxy.net/tv/index.mpd'
+        url: 'http://tv2.the-galaxy.net/tv/index.mpd'
     };
 
     sources.query(function (data) {
@@ -761,7 +761,7 @@ app.controller('DashController', function ($scope, sources, contributors, dashif
         $scope.initChartingByMediaType('audio');
 
 
-        $scope.selectedItem.url =  "http://tv.the-galaxy.net/tv/index.mpd";
+        $scope.selectedItem.url =  "http://tv2.the-galaxy.net/tv/index.mpd";
 
         $scope.doLoad();
     })();
